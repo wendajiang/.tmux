@@ -128,6 +128,11 @@ tmux_conf_theme_status_fg="$tmux_conf_theme_colour_3"
 tmux_conf_theme_status_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_status_attr="none"
 
+# pane-name 
+set-option -g status-interval 1
+set-option -g automatic-rename on
+set-option -g automatic-rename-format '#(basename "#{pane_current_path}")'
+
 # terminal title
 #   - built-in variables are:
 #     - #{circled_window_index}
